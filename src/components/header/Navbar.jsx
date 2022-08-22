@@ -1,72 +1,120 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/headerLogo.svg";
+import dropDownIcon from "../../assets/dropdown.svg";
+import globeIcon from "../../assets/globe.svg";
 
 export const Navbar = () => {
   return (
-    <nav class="bg-gray-100">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between">
-          <div class="flex space-x-4">
+    <nav className="bg-gray-100">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between">
+          <div className="flex space-x-4">
             <div>
-              <Link to="/" class="flex items-center py-5 px-2">
+              <Link to="/" className="flex items-center py-4 px-2">
                 <img src={Logo} alt="asana" />
               </Link>
             </div>
 
             {/* <!-- primary nav --> */}
-            <div class="hidden md:flex items-center space-x-1">
-              <Link to="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">
-                Features
+            <div className="hidden md:flex items-center space-x-1">
+              <Link
+                to="/whyAsana"
+                className="py-4 px-2 text-gray-500 hover:text-gray-900"
+              >
+                <span className="flex">
+                  <span>Why Asana?</span>
+                  <img className="pt-1 pl-1" src={dropDownIcon} alt="V" />
+                </span>
               </Link>
-              <Link to="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">
+
+              <Link
+                to="/features"
+                className="py-4 px-2 text-gray-500 hover:text-gray-900 dropdown"
+              >
+                <span className="flex">
+                  <span>Features</span>
+                  <img className="pt-1 pl-1" src={dropDownIcon} alt="V" />
+                </span>
+              </Link>
+
+              <Link
+                to="/resources"
+                className="py-4 px-2 text-gray-500 hover:text-gray-900"
+              >
+                <span className="flex">
+                  <span> Resources</span>
+                  <img className="pt-1 pl-1" src={dropDownIcon} alt="V" />
+                </span>
+              </Link>
+
+              <Link
+                to="/enterprise"
+                className="py-4 px-2 text-gray-500 hover:text-gray-900"
+              >
+                Enterprise
+              </Link>
+
+              <Link
+                to="/pricing"
+                className="py-4 px-2 text-gray-500 hover:text-gray-900"
+              >
                 Pricing
               </Link>
             </div>
           </div>
 
           {/* <!-- secondary nav --> */}
-          <div class="hidden md:flex items-center space-x-1">
-            <Link to="" class="py-5 px-3">
+          <div className="hidden md:flex items-center font-sans space-x-4">
+            <Link
+              to="/g"
+              className="py-1 px-3 text-gray-500 hover:text-gray-900  "
+            >
+              <img src={globeIcon} alt="0" />
+            </Link>
+
+            <div className="w-[1px] py-4 bg-gray-500"></div>
+
+            <Link
+              to="/login"
+              className="py-1 px-3 text-gray-500 hover:text-gray-900  "
+            >
+              Contact Sales
+            </Link>
+
+            <Link
+              to="/login"
+              className="py-1 px-3 text-gray-500   hover:text-gray-900  font-sans"
+            >
               Login
             </Link>
             <Link
-              href=""
-              class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300"
+              to="/getStarted"
+              className="py-1.5 px-5 font-medium bg-neutral-900 hover:bg-Neutral-400 text-white hover:text-white rounded transition duration-300"
             >
-              Signup
+              Get Started
             </Link>
           </div>
 
           {/* <!-- mobile button goes here --> */}
-          <div class="md:hidden flex items-center">
-            <button class="mobile-menu-button">
+          <div className="md:hidden flex items-center">
+            <button className="mobile-menu-button">
               <svg
-                class="w-6 h-6"
+                className="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
             </button>
           </div>
         </div>
-      </div>
-
-      {/* <!-- mobile menu --> */}
-      <div class="mobile-menu hidden md:hidden">
-        <Link to="#" class="block py-2 px-4 text-sm hover:bg-gray-200">
-          Features
-        </Link>
-        <Link to="#" class="block py-2 px-4 text-sm hover:bg-gray-200">
-          Pricing
-        </Link>
       </div>
     </nav>
   );
