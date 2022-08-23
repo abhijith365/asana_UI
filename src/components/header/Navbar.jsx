@@ -5,7 +5,7 @@ import globeIcon from "../../assets/globe.svg";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-gray-100">
+    <nav className="bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-4">

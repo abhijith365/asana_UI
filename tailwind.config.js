@@ -5,11 +5,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding: {
+        '1/2': '4%',
+        '80': '10rem',
+        '65': {
+          'padding-left': '47rem',
+          'padding-right': '14rem'
+        }
+      },
       color: {
         'white': "#fff",
         'light-gray': '#848F99'
       },
       width: {
+        '98': '98%',
         "py-1.5": {
           "padding-top": "0.4rem",
           "padding-bottom": "0.4rem"
@@ -24,6 +33,17 @@ module.exports = {
       },
       height: {
         'vHr-h': "1rem"
+      },
+      flex: {
+        '2': '25%',
+        '8': '75%'
+      },
+      text: {
+
+        'lg-6': {
+          'font-size': '3.125rem',
+          'line-height': '2.75rem'
+        }
       }
 
     },
